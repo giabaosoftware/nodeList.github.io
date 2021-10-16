@@ -24,7 +24,7 @@
             <div class="container">
                         <form action="" class="form">
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-4">
                                     <div class="form-group">
                                         <h4 class="main-title">
                                             Node
@@ -40,17 +40,29 @@
                                         <input type="button" value="Add" onclick ="myFunction()" class="btn btn-primary">
                                     </div>
                                 </div>
-                               <div class="col-3">
+                               <div class="col-4">
                                 <div class="form-group">
                                     <h4 class="main-title">
                                         Search
                                     </h4>
                                     <div class="form-item flex column">
-                                        <label for="">Node ID</label>
-                                        <input type="text" name="" id="id" placeholder="Enter Id..." pattern="[0-9]" required onchange="search()">
+                                        <label for="">Search ID</label>
+                                        <input type="text" name="" id="id" placeholder="Enter Node Id..." pattern="[0-9]" required onchange="search()">
                                     </div>
                                 </div>
-                               </div>                              
+                               </div>
+                               <div class="col-4">
+                                <div class="form-group">
+                                    <h4 class="main-title">
+                                        Remove
+                                    </h4>
+                                    <div class="form-item flex column">
+                                        <label for="">Remove Id</label>
+                                        <input type="text" name="" id="id" placeholder="Enter Node Id..." pattern="[0-9]" required onchange="search()">
+                                    </div>
+                                    <input type="button" value="Remove" onclick ="removeNode()" class="btn btn-primary">
+                                </div>
+                               </div>                               
                             </div>     
                         </form>
             </div>

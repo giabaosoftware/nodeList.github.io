@@ -61,7 +61,7 @@ function myFunction(){
 
 function addElement(header, text, index){
     const newDiv = document.createElement('div');
-    newDiv.innerHTML = `<div class="col-3" id="box-${index}">
+    newDiv.innerHTML = `<div class="col-4" id="box-${index}">
                         <div class="note-item flex column justify-between">
                             <div class="note-header">
                                 <div class="note-item__header flex justify-between align-center">
@@ -97,7 +97,7 @@ function search(){
         console.log(node.stack[i]);
         if(parseInt(elId.value) === node.stack[i].index){
             let element = document.getElementById(`box-${i}`);
-            element.style.display = "block";
+                element.style.display = "block";
             for(let j = 0; j < node.stack.length; j++){
                 if(parseInt(elId.value) !== node.stack[j].index){
                     let element = document.getElementById(`box-${j}`);
@@ -107,7 +107,7 @@ function search(){
         } else if (!elId.value) {
             for(let i = 0; i < node.stack.length; i++){
                 let element = document.getElementById(`box-${i}`);
-                element.style.display = "block";
+                    element.style.display = "block";
             }
         }
     }
