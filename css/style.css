@@ -7,7 +7,7 @@
 
 body{
     background-color: var(--secondaryColor);
-    font-family: Rockwell;
+    font-family: Rockwell, Helvetica, sans-serif;
 }
 
 textarea{
