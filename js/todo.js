@@ -49,6 +49,7 @@ let count = 0;
 let elTitle = document.getElementById('title');
 let elContent = document.getElementById('content');
 let elId = document.getElementById('id');
+let elAlert = document.getElementById('alert');
 
 
 function myFunction(){
@@ -67,7 +68,7 @@ function addElement(header, text, index){
                                     <h3 class="title">
                                         ${header}
                                     </h3>
-                                    <div onclick="removeElement(${index})">
+                                    <div onclick="hideElement(${index})">
                                         <i class="bi bi-x-circle"></i>
                                     </div>
                                 </div>
@@ -85,12 +86,12 @@ function addElement(header, text, index){
     document.getElementById('box').insertBefore(newDiv, currentDiv);
 }
 
-function removeElement(i){
+function hideElement(i){
     let element = document.getElementById(`box-${i}`);
     element.style.display = "none";
 }
 
-let elAlert = document.getElementById('alert');
+
 function search(){
     for(let i = 0; i < node.stack.length; i++){
         console.log(node.stack[i]);
