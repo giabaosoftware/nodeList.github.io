@@ -20,8 +20,8 @@ class Stack{
 
     removeItem(item){
         if(this.stack.indexOf(item) !== -1){
-            let head = this.stack.slice(0, this.searchIndex(item));
-            let tail = this.stack.slice(this.searchIndex(item) + 1, this.stack.length + 1);
+            let head = this.stack.slice(0, this.searchItem(item));
+            let tail = this.stack.slice(this.searchItem(item) + 1, this.stack.length + 1);
             this.stack = head.concat(tail);
             return this.stack;
         } else {
@@ -85,6 +85,9 @@ function addElement(header, text, index){
     const currentDiv = document.getElementById('app');
     document.getElementById('box').insertBefore(newDiv, currentDiv);
 }
+
+let elRemove = document.getElementById('removeID');
+
 
 function hideElement(i){
     let element = document.getElementById(`box-${i}`);
