@@ -111,10 +111,6 @@ input::placeholder, textarea::placeholder {
     color: #A9A9A9;
 }
 
-input:hover, textarea:hover {
-    border: 1px solid var(--primaryColor);
-}
-
 .note-item__header{
     font-family: Arial, Helvetica, sans-serif;
     border-bottom: 1px solid rgb(193, 193, 193);
