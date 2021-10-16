@@ -14,7 +14,7 @@ class Stack{
         this.stack.pop();
     }
 
-    searchIndex(item){
+    searchItem(item){
         return this.stack.indexOf(item);
     }
 
