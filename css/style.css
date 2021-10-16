@@ -67,6 +67,7 @@ label{
     border: 1px solid var(--primaryColor);
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color .1s ease-in;
 }
 
 .btn:hover{
@@ -116,10 +117,12 @@ input:hover, textarea:hover {
     box-shadow: 6px 7px 18px rgba(32, 72, 85, 0.17), -8px -6px 13px rgba(193, 240, 255, 0.23);
     border-radius: 23px;
     margin-bottom: 15px;
+    transition: box-shadow .2s linear;
 }
 
 .note-item:hover{
-    border: 1px solid var(--primaryColor);
+    box-shadow: 6px 7px 18px rgba(32, 72, 85, 0.37), -8px -6px 13px rgba(193, 240, 255, 0.63);
+
 }
 
 .note-item__content{
@@ -129,7 +132,8 @@ input:hover, textarea:hover {
     margin-top: 20px;
     margin-bottom: 20px;
     max-height: 300px;
-    overflow: hidden;
+    overflow: scroll;
+    overflow-x: auto;
 }
 
 .footer__copyright{
