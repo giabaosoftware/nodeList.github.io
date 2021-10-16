@@ -47,9 +47,8 @@
                                     </h4>
                                     <div class="form-item flex column">
                                         <label for="">Node ID</label>
-                                        <input type="text" name="" id="" placeholder="Enter Node ID...">
+                                        <input type="text" name="" id="id" placeholder="Enter Id..." pattern="[0-9]" required onchange="search()">
                                     </div>
-                                    <input type="button" value="Search" onclick="search()" class="btn btn-primary">
                                 </div>
                                </div>                              
                             </div>     
@@ -83,7 +82,11 @@
                     </div> -->
                 </div>
             </div>
+            <div class="row">
+                <p id="alert"></p>
+            </div>
         </section>
+        
     </main>
     <footer class="footer">
         <div class="container">

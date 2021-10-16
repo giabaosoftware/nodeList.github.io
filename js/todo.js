@@ -39,18 +39,16 @@ class Stack{
             return false;
         }
     }
-
-    display(item, element){
-        element.value = item;
-    }
 }
 
 //App
 let node = new Stack();
 let count = 0;
 
+
 let elTitle = document.getElementById('title');
 let elContent = document.getElementById('content');
+let elId = document.getElementById('id');
 
 
 function myFunction(){
@@ -78,7 +76,7 @@ function addElement(header, text, index){
                                 </p>
                             </div>
                             <div class="note-footer">
-                                Node Id : 00-${index}
+                                Node Id : ${index}
                             </div>
                         </div>
                     </div>`;
@@ -90,7 +88,26 @@ function addElement(header, text, index){
 function removeElement(i){
     let element = document.getElementById(`box-${i}`);
     element.style.display = "none";
-    console.log(node);
 }
 
-
+let elAlert = document.getElementById('alert');
+function search(){
+    for(let i = 0; i < node.stack.length; i++){
+        console.log(node.stack[i]);
+        if(parseInt(elId.value) === node.stack[i].index){
+            let element = document.getElementById(`box-${i}`);
+            element.style.display = "block";
+            for(let j = 0; j < node.stack.length; j++){
+                if(parseInt(elId.value) !== node.stack[j].index){
+                    let element = document.getElementById(`box-${j}`);
+                    element.style.display = "none";
+                }
+            }
+        } else if (!elId.value) {
+            for(let i = 0; i < node.stack.length; i++){
+                let element = document.getElementById(`box-${i}`);
+                element.style.display = "block";
+            }
+        }
+    }
+}
