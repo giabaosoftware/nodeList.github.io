@@ -51,11 +51,13 @@ textarea{
 
 .form-item{
     margin-bottom: 10px;
+    position: relative;
 }
 
 label{
     font-size: 14px;
     margin-bottom: 5px;
+    margin-top: 15px;
 }
 
 
@@ -93,6 +95,14 @@ textarea{
     height: 100px;
     padding-top: 10px;
     margin-bottom: 10px;
+}
+
+#alert{
+    color: red;
+    position: absolute;
+    bottom: -10px;
+    font-size: 12px;
+    margin-left: 10px;
 }
 
 input::placeholder, textarea::placeholder {

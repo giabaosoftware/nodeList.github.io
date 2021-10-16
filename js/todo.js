@@ -53,9 +53,18 @@ let elAlert = document.getElementById('alert');
 
 
 function myFunction(){
-    node.push({index: count, header : elTitle.value, text : elContent.value});
-    addElement(node.stack[count].header, node.stack[count].text, node.stack[count].index);
-    count++;
+    if(elTitle.value){
+        node.push({index: count, header : elTitle.value, text : elContent.value});
+        addElement(node.stack[count].header, node.stack[count].text, node.stack[count].index);
+        elTitle.style.border = "none";
+        elAlert.textContent = "";
+        count++;
+    } else {
+        elAlert.textContent = "*Please add title";
+        elTitle.style.border = "1px solid red";
+        return false;
+    }
+    
 }
 
 
